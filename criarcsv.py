@@ -16,7 +16,8 @@ transacoes = [
 ]
 
 agora = datetime.now()
-nome_arquivo = agora.strftime("%d-%m-%Y") + "-Relatorio-Contabil.csv"
+#nome_arquivo = agora.strftime("%d-%m-%Y") + "-Relatorio-Contabil.csv"
+nome_arquivo = "Relatorio-Contabil.csv"
 
 valor_total = sum(transacao['valor'] for transacao in transacoes)
 
