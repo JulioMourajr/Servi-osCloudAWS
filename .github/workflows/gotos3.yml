@@ -27,10 +27,13 @@ jobs:
         python -m pip install --upgrade pip
     - name: Run application
       run: python criarcsv.py  # Roda a aplicação 
-    
     - name: Upload artefato
       uses: actions/upload-artifact@v4
       with:
         name: meu-arquivo
-        path: output/$(date +'%d-%m-%Y')-Relatorio-Contabil.csv 
+        path: $(date +'%d-%m-%Y')-Relatorio-Contabil.csv 
+        if-no-files-found: warn
+        compression-level: 6
+        overwrite: false
+        include-hidden-files: false
 
