@@ -36,7 +36,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: meu-arquivo
-        path: ${{ env.NOME_ARQUIVO }}
+        path: Relatorio-Contabil.csv
         if-no-files-found: warn
         compression-level: 6
         overwrite: false
@@ -60,5 +60,5 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
     
     - name: Copiando o arquivo para o S3
-      run: aws s3 cp ${{ github.workspace }}/meu-arquivo/${{ env.NOME_ARQUIVO }} s3://${{ secrets.AWS_BUCKET_NAME }}
+      run: aws s3 cp ${{ github.workspace }}/meu-arquivo/Relatorio-Contabil.csv s3://${{ secrets.AWS_BUCKET_NAME }}
 
