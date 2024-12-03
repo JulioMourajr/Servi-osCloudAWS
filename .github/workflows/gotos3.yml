@@ -3,7 +3,8 @@ name: Python application
 on:
   push:   
     branches:
-      - main  
+      - main
+      - feature/deploys3
   pull_request:
     branches:
       - main
@@ -40,4 +41,24 @@ jobs:
         compression-level: 6
         overwrite: false
         include-hidden-files: false
+  
+  aws:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Fazer Download do artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: meu-arquivo
+        path: ${{ github.workspace }}
+    
+    - name: Configurando as Credenciais da AWS
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+    
+    - name: Copiando o arquivo para o S3
+      run: aws s3 cp ${{ github.workspace }}/$NOME_ARQUIVO s3://${{ secrets.AWS_BUCKET_NAME }}
 
