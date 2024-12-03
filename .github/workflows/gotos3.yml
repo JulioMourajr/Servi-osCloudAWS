@@ -1,17 +1,16 @@
 name: Python application
 
-# Definir quando a pipeline deve ser executada
 on:
-  push:   # Executa a pipeline em qualquer push (alteração) no repositório
+  push:   
     branches:
-      - main  # Ou a branch principal do seu repositório
+      - main  
   pull_request:
     branches:
       - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Usa um ambiente Ubuntu
+    runs-on: ubuntu-latest  
 
     steps:
     - name: Check out the repository
@@ -20,18 +19,23 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.8'  # Você pode definir a versão do Python
+        python-version: '3.8'  
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+
+    - name: Variavel de ambiente para o nome do arquivo
+      run: echo "NOME_ARQUIVO=$(date +'%d-%m-%Y')-Relatorio-Contabil.csv" >> $GITHUB_ENV
+
     - name: Run application
-      run: python criarcsv.py  # Roda a aplicação 
+      run: python criarcsv.py  
+
     - name: Upload artefato
       uses: actions/upload-artifact@v4
       with:
         name: meu-arquivo
-        path:  Relatorio-Contabil.csv 
+        path: ${{ env.NOME_ARQUIVO }}
         if-no-files-found: warn
         compression-level: 6
         overwrite: false
