@@ -26,9 +26,6 @@ jobs:
       run: |
         python -m pip install --upgrade pip
 
-    - name: Variavel de ambiente para o nome do arquivo
-      run: echo "NOME_ARQUIVO=$(date +'%d-%m-%Y')-Relatorio-Contabil.csv" >> $GITHUB_ENV
-
     - name: Run application
       run: python criarcsv.py  
 
@@ -50,7 +47,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: meu-arquivo
-        path: ${{ github.workspace }}
+        path: ./meu-arquivo
     
     - name: Configurando as Credenciais da AWS
       uses: aws-actions/configure-aws-credentials@v1
@@ -60,5 +57,5 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
     
     - name: Copiando o arquivo para o S3
-      run: aws s3 cp ${{ github.workspace }}/meu-arquivo/Relatorio-Contabil.csv s3://${{ secrets.AWS_BUCKET_NAME }}
+      run: aws s3 cp ./meu-arquivo/Relatorio-Contabil.csv s3://${{ secrets.AWS_BUCKET_NAME }}
 
