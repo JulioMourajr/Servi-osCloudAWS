@@ -1,7 +1,6 @@
 import csv
 from datetime import datetime
 
-
 transacoes = [
     {'data': '01/01/2023', 'descricao': 'Venda de produto A', 'valor': 30000},
     {'data': '02/01/2023', 'descricao': 'Compra de material B', 'valor': -500},
@@ -16,8 +15,8 @@ transacoes = [
 ]
 
 agora = datetime.now()
-#nome_arquivo = agora.strftime("%d-%m-%Y") + "-Relatorio-Contabil.csv"
-nome_arquivo = "Relatorio-Contabil.csv"
+nome_arquivo = agora.strftime("%d-%m-%Y") + "-Relatorio-Contabil.csv"
+#nome_arquivo = "Relatorio-Contabil.csv"
 
 valor_total = sum(transacao['valor'] for transacao in transacoes)
 
