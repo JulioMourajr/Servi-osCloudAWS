@@ -2,16 +2,16 @@ import csv
 from datetime import datetime
 
 transacoes = [
-    {'data': '04/12/2024', 'descricao': 'Venda de produto A', 'valor': 30000},
-    {'data': '02/01/2023', 'descricao': 'Compra de material B', 'valor': -500},
-    {'data': '03/01/2023', 'descricao': 'Serviço prestado C', 'valor': 2000},
-    {'data': '04/01/2023', 'descricao': 'Despesa com transporte', 'valor': -300},
-    {'data': '05/01/2023', 'descricao': 'Venda de produto D', 'valor': 15000},
-    {'data': '06/01/2023', 'descricao': 'Compra de material E', 'valor': -700},
-    {'data': '07/01/2023', 'descricao': 'Serviço prestado F', 'valor': 2500},
-    {'data': '08/01/2023', 'descricao': 'Despesa com marketing', 'valor': -1200},
-    {'data': '09/01/2023', 'descricao': 'Venda de produto G', 'valor': 18000},
-    {'data': '10/01/2023', 'descricao': 'Compra de material H', 'valor': -800},
+    {'data': '01/11/2024', 'descricao': 'Venda de notebook', 'valor': 4500},
+    {'data': '05/11/2024', 'descricao': 'Compra de suprimentos de escritório', 'valor': -300},
+    {'data': '10/11/2024', 'descricao': 'Serviço de consultoria', 'valor': 2000},
+    {'data': '15/11/2024', 'descricao': 'Despesa com transporte', 'valor': -150},
+    {'data': '20/11/2024', 'descricao': 'Venda de smartphone', 'valor': 3500},
+    {'data': '25/11/2024', 'descricao': 'Compra de material de limpeza', 'valor': -200},
+    {'data': '30/11/2024', 'descricao': 'Serviço de manutenção', 'valor': 1200},
+    {'data': '05/12/2024', 'descricao': 'Despesa com marketing', 'valor': -500},
+    {'data': '10/12/2024', 'descricao': 'Venda de tablet', 'valor': 2500},
+    {'data': '15/12/2024', 'descricao': 'Compra de software', 'valor': -800},
 ]
 
 agora = datetime.now()
