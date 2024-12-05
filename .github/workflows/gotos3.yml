@@ -56,6 +56,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION }}
     
-    - name: Copiando o arquivo para o S3
-      run: aws s3 cp ./meu-arquivo/Relatorio-Contabil.csv s3://${{ secrets.AWS_BUCKET_NAME }}
-
+    - run: |
+        timestamp=$(date +'%Y%m%d%H%M%S')
+        aws s3 cp ./meu-arquivo/Relatorio-Contabil.csv s3://${{ secrets.AWS_BUCKET_NAME }}/Relatorio-Contabil-$timestamp.csv
