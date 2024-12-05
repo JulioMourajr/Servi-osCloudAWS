@@ -2,7 +2,7 @@ import csv
 from datetime import datetime
 
 transacoes = [
-    {'data': '01/01/2023', 'descricao': 'Venda de produto A', 'valor': 30000},
+    {'data': '04/12/2024', 'descricao': 'Venda de produto A', 'valor': 30000},
     {'data': '02/01/2023', 'descricao': 'Compra de material B', 'valor': -500},
     {'data': '03/01/2023', 'descricao': 'Serviço prestado C', 'valor': 2000},
     {'data': '04/01/2023', 'descricao': 'Despesa com transporte', 'valor': -300},
