@@ -13,6 +13,7 @@ transacoes = [
     {'data': '10/12/2024', 'descricao': 'Venda de tablet', 'valor': 2500},
     {'data': '15/12/2024', 'descricao': 'Compra de software', 'valor': -800},
     {'data': '05/12/2024', 'descricao': 'Salário funcionário', 'valor': -5800},
+    {'data': '01/11/2024', 'descricao': 'Venda de PS5', 'valor': 4000},
 ]
 
 agora = datetime.now()
