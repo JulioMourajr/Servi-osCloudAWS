@@ -57,5 +57,5 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
     
     - run: |
-        timestamp=$(date +'%d/%m/%Y %H:%M:%S')
+        timestamp=$(date +'%d%m%Y%H:%M:%S')
         aws s3 cp ./meu-arquivo/Relatorio-Contabil.csv s3://${{ secrets.AWS_BUCKET_NAME }}/Relatorio-Contabil-$timestamp.csv
