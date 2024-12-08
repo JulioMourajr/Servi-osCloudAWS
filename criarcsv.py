@@ -19,6 +19,16 @@ transacoes = [
     {'data': '15/11/2024', 'descricao': 'Despesa com transporte', 'valor': -150},
     {'data': '20/11/2024', 'descricao': 'Venda de smartphone', 'valor': 3500},
     {'data': '25/11/2024', 'descricao': 'Compra de material de limpeza', 'valor': -200},
+    {'data': '30/11/2024', 'descricao': 'Serviço de manutenção', 'valor': 2200},
+    {'data': '05/12/2024', 'descricao': 'Despesa com marketing', 'valor': -500},
+    {'data': '10/12/2024', 'descricao': 'Venda de tablet', 'valor': 2500},
+    {'data': '15/12/2024', 'descricao': 'Compra de software', 'valor': -800},
+    {'data': '05/12/2024', 'descricao': 'Salário funcionário', 'valor': -5800},
+    {'data': '01/11/2024', 'descricao': 'Venda de PS5', 'valor': 4000},
+    {'data': '05/11/2024', 'descricao': 'Compra de suprimentos de escritório', 'valor': -300},
+    {'data': '10/11/2024', 'descricao': 'Serviço de consultoria', 'valor': 2000},
+    {'data': '15/11/2024', 'descricao': 'Despesa com transporte', 'valor': -150},
+    {'data': '20/11/2024', 'descricao': 'Venda de smartphone', 'valor': 3500},
 ]
 
 agora = datetime.now()
