@@ -9,3 +9,7 @@ Será Criada uma solução para automatizar a arquitetura em todo o seu fluxo, s
 O código vai enviar arquivos de forma automática para um bucket s3 de forma automatizada.
 
 Usar os serviços da AWS, como SNS, SQS, Lambda e DynamoDB, Gravando em um banco de dados o nome do arquivo e o número de linhas.
+
+## Monitoramento e Observabilidade
+
+Foi configurado um email, para receber quando ocorrer um push na branch main ou um pull request.
